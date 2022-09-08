@@ -13,7 +13,7 @@ println(BMI);
 size(720, 500);
 background(255, 255, 255);
 
-
+fill(0-255-51);
 rect(140, 200, 120, 30);
 rect(300, 100, 120, 30);
 rect(460, 200, 120, 30);
@@ -24,7 +24,7 @@ text("lengte: " + lengte + "meter", 470, 220);
 text("leeftijd" + leeftijd + " jaar", 305, 120);
 
 
-
+  fill(102,255,102);
   textSize(30);
   text("BMI:" + BMI, 310, 350);
 
