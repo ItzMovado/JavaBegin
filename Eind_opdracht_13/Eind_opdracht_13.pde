@@ -22,7 +22,7 @@ class Snake {
     if (gameState == 1) {
       fill(50, 200, 50);
       stroke(150, 200, 50);
-      rect(x, y, 20, 20);
+      rect(x, y, size, size);
       fill(255);
 
       if (d == 0) {
@@ -134,7 +134,7 @@ Food food;
 Timer timer;
 
 void setup() {
-  size(600, 400);
+  fullScreen();
   snake = new Snake();
   food = new Food();
   timer = new Timer();
