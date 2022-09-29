@@ -5,6 +5,7 @@ int[] dk = { RIGHT, DOWN, LEFT, UP };
 int gameState = 1;
 int time = 0;
 int nextTime = 0;
+int size = 20;
 
 class Snake {
   int x, y;
@@ -22,6 +23,21 @@ class Snake {
       fill(50, 200, 50);
       stroke(150, 200, 50);
       rect(x, y, 20, 20);
+      fill(255);
+
+      if (d == 0) {
+        ellipse(x+size*0.6, y+size*0.8, 5, 5);
+         ellipse(x+size*0.6, y+size*0.2, 5, 5);
+      } else if (d== 1) {
+        ellipse(x+size*0.8, y+size*0.8, 5, 5);
+        ellipse(x+size*0.2, y+size*0.8, 5, 5);
+      } else if (d == 2) {
+        ellipse(x+size*0.4, y+size*0.8, 5, 5);
+         ellipse(x+size*0.4, y+size*0.2, 5, 5);
+      } else if (d == 3) {
+       ellipse(x+size*0.8, y+size*0.2, 5, 5);
+        ellipse(x+size*0.2, y+size*0.2, 5, 5);
+      }
       for ( int i = 0; i < tail.size(); i++) {
         rect(tail.get(i).x, tail.get(i).y, 20, 20);
       }
@@ -122,7 +138,6 @@ void setup() {
   snake = new Snake();
   food = new Food();
   timer = new Timer();
-  
 }
 
 void draw() {
