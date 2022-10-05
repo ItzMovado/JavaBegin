@@ -7,6 +7,8 @@ int time = 0;
 int nextTime = 0;
 int size = 20;
 
+
+
 class Snake {
   int x, y;
   ArrayList<PVector> tail;
@@ -27,15 +29,15 @@ class Snake {
 
       if (d == 0) {
         ellipse(x+size*0.6, y+size*0.8, 5, 5);
-         ellipse(x+size*0.6, y+size*0.2, 5, 5);
+        ellipse(x+size*0.6, y+size*0.2, 5, 5);
       } else if (d== 1) {
         ellipse(x+size*0.8, y+size*0.8, 5, 5);
         ellipse(x+size*0.2, y+size*0.8, 5, 5);
       } else if (d == 2) {
         ellipse(x+size*0.4, y+size*0.8, 5, 5);
-         ellipse(x+size*0.4, y+size*0.2, 5, 5);
+        ellipse(x+size*0.4, y+size*0.2, 5, 5);
       } else if (d == 3) {
-       ellipse(x+size*0.8, y+size*0.2, 5, 5);
+        ellipse(x+size*0.8, y+size*0.2, 5, 5);
         ellipse(x+size*0.2, y+size*0.2, 5, 5);
       }
       for ( int i = 0; i < tail.size(); i++) {
@@ -71,6 +73,7 @@ class Snake {
   }
 
   void grow() {
+
     isGrowing = true;
   }
   void onKeyPressed() {
