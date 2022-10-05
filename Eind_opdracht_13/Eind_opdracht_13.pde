@@ -41,6 +41,7 @@ class Snake {
         ellipse(x+size*0.2, y+size*0.2, 5, 5);
       }
       for ( int i = 0; i < tail.size(); i++) {
+        fill(random(255),random(255), random(255));
         rect(tail.get(i).x, tail.get(i).y, 20, 20);
       }
       for (int i =0; i < tail.size(); i++) {
@@ -97,6 +98,7 @@ class Food {
     fill(255);
     stroke(200, 0, 200);
     ellipse(x+10, y+10, 20, 20);
+    
   }
   boolean wasEaten(int ox, int oy) {
     if ( x == ox && y == oy ) {
@@ -134,12 +136,16 @@ class Timer {
 
 Snake snake;
 Food food;
+Food food2;
+Food food3;
 Timer timer;
 
 void setup() {
   fullScreen();
   snake = new Snake();
   food = new Food();
+  food2 = new Food();
+  food3 = new Food();
   timer = new Timer();
 }
 
@@ -150,7 +156,15 @@ void draw() {
     if ( food.wasEaten( snake.x, snake.y ) ) {
       snake.grow();
     }
+    if ( food2.wasEaten( snake.x, snake.y ) ) {
+      snake.grow();
+    }  if ( food3.wasEaten( snake.x, snake.y ) ) {
+      snake.grow();
+    }
+     
   }
+  food3.draw();
+  food2.draw();
   food.draw();
   snake.draw();
 }
